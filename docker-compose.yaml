@@ -4,7 +4,9 @@ services:
     container_name: sveltekit
     command: bash ./wait-for-it.sh iclosetdb:3306 -- ./push-and-run.sh
     ports:
-      - '3000:3000'
+      - 3000:3000
+      - 24678:24678
+      - 5173:5173
     depends_on:
       - iclosetdb
     build:
@@ -13,19 +15,18 @@ services:
     volumes:
       - .:/app
       - /app/node_modules
-      - /app/.next
 
   iclosetdb:
     image: mariadb
     environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: ${MYSQL_DATABASE}
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: '${MYSQL_ROOT_PASSWORD}'
+      MYSQL_DATABASE: '${MYSQL_DATABASE}'
+      MYSQL_USER: '${MYSQL_USER}'
+      MYSQL_PASSWORD: '${MYSQL_PASSWORD}'
     volumes:
-      - data:/var/lib/mysql
+      - icloset:/var/lib/mysql
     ports:
       - '3306:3306'
 
 volumes:
-  data:
+  icloset:

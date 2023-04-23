@@ -3,7 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host",
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --plugin-search-dir . --check .",
@@ -11,10 +11,17 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/adapter-static": "^2.0.2",
 		"@sveltejs/kit": "^1.5.0",
+		"@unocss/preset-icons": "^0.51.6",
+		"@unocss/preset-uno": "^0.51.6",
+		"@unocss/preset-wind": "^0.51.6",
+		"@unocss/reset": "^0.51.6",
 		"prettier": "^2.8.0",
 		"prettier-plugin-svelte": "^2.8.1",
 		"svelte": "^3.54.0",
+		"svelte-preprocess": "^5.0.3",
+		"unocss": "^0.51.6",
 		"vite": "^4.2.0"
 	},
 	"type": "module"
