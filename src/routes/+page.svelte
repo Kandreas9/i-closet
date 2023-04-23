@@ -1,2 +1,9 @@
-<h1 class="text-red">Welcome to test</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import Hero3dScene from '../lib/components/hero3dScene.svelte';
+</script>
+
+<section class="h-full">
+	<h1 class="flex justify-center my-[4rem]"><img src="/icloset-dark.svg" alt="logo" /></h1>
+
+	<Hero3dScene />
+</section>

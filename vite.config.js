@@ -3,6 +3,9 @@ import { defineConfig } from 'vite';
 import UnoCSS from 'unocss/vite';
 
 export default defineConfig({
+	ssr: {
+		noExternal: ['three', 'troika-three-text']
+	},
 	vite: {
 		server: {
 			watch: {

@@ -1,0 +1,8 @@
+body {
+	background: linear-gradient(180deg, #3d498c 0%, #202856 70.31%, #242e62 100%);
+	background-repeat: no-repeat;
+	min-height: 100dvh;
+	width: 100vw;
+	display: grid;
+	grid-template-rows: max-content 1fr;
+}
